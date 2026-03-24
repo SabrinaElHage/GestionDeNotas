@@ -1,5 +1,6 @@
 #include <iostream>
 
+using namespace std;
 
 //estructura
 
@@ -8,6 +9,7 @@
 //funcion principal
 int main(){
 
+    cout<<"hola";
 
 
     return 0;
