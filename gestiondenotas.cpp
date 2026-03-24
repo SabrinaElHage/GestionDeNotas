@@ -35,6 +35,7 @@ config miconfig;
 //funciones
 
 int leerEnteros(string mensaje);
+float leerDecimal(string mensaje);
 
 //funcion principal
 int main(){
@@ -62,4 +63,4 @@ int leerEnteros(string mensaje){
             return numero;
         }
     }
-}
+}//fin de la funcion
