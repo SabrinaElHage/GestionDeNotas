@@ -1,6 +1,7 @@
 //LIBRERIAS
 #include <iostream>
 #include <fstream>
+#include <conio.h>
 
 
 //ESTRUCTUTRA
