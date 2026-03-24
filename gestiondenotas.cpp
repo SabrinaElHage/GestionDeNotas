@@ -30,13 +30,13 @@ struct estudiante{
 
 //declaraciones
 vector<string> listaMaterias;
-config miconfig;
+config miConfig;
 
 //funciones
 
 int leerEnteros(string mensaje);
 float leerDecimal(string mensaje);
-void gotoxi(int x, int y);
+void gotoxy(int x, int y);
 void color(int tex, int fon);
 void dibujarFondo();
 
@@ -89,7 +89,7 @@ float leerDecimal(string mensaje){
     }
 }//fin de la funcion
 
-void gotoxi(int x, int y){
+void gotoxy(int x, int y){
 
     COORD coord;
     coord.X = x;
@@ -108,12 +108,12 @@ void color(int tex, int fon){
 //fondo
 void dibujarFondo(){
 
-    for(int i = 0; i < 25; i++){
-        for(int j = 0; j < 80; j++){
-            gotoxi(j, i);
-            color(miconfig.colorTexto, miconfig.colorFondo);
-            cout << " ";
+    color(miConfig.colorTexto, miConfig.colorFondo);
+system("cls"); // Limpia la pantalla.
+    for (int y = 0; y < 28; y++) {
+        gotoxy(0, y);
+        for (int x = 0; x < 80; x++){
+        cout << " "; // Rellena con espacios para aplicar el color.
         }
     }
-
 }//fin de la funcion
