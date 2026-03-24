@@ -39,6 +39,7 @@ float leerDecimal(string mensaje);
 void gotoxy(int x, int y);
 void color(int tex, int fon);
 void dibujarFondo();
+void guardarUsuarios(const vector<estudiante>& usuarios);
 
 //funcion principal
 int main(){
@@ -115,5 +116,22 @@ system("cls"); // Limpia la pantalla.
         for (int x = 0; x < 80; x++){
         cout << " "; // Rellena con espacios para aplicar el color.
         }
+    }
+}//fin de la funcion
+
+//guardado
+void guardarUsuarios(const vector<estudiante>& usuarios) {
+    ofstream archivo("usuarios.txt");
+    if (archivo.is_open()) {
+        for (const auto& usuario : usuarios) {
+            archivo << usuario.nombre << endl;
+            for (int i = 0; i < MAX_MATERIAS; i++) {
+                archivo << usuario.notas[i] << " ";
+            }
+            archivo << endl;
+        }
+        archivo.close();
+    } else {
+        cout << "No se pudo abrir el archivo para guardar los usuarios." << endl;
     }
 }//fin de la funcion
